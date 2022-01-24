@@ -1,7 +1,7 @@
 # aluracord-matrix
 👨‍💻 Projeto criado na Imersão React com a @alura @omariosouto @peas
 <div align="center" id="top"> 
-  <img src="./src/assets/logo.svg" alt="02 Dtmoney" />
+  <img src="./src/assets/logo.svg" alt="" />
 </div>
 
 <hr/>
@@ -14,7 +14,7 @@ This applications is an personal finance manager.
 ## Screenshots
 
 <div align="center" id="top"> 
-  <img src="./src/assets/screen2.png" alt="02 Dtmoney" />
+  <img src="./src/assets/screen2.png" alt="" />
 </div>
 <br/>
 <br/>
