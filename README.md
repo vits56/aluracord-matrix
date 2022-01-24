@@ -47,10 +47,10 @@ Before starting 🏁, you need to have [Git](https://git-scm.com) and [Node](htt
 
 ```bash
 # Clone this project
-$ git clone https://github.com/vits56/dtmoney
+$ git clone https://github.com/vits56/aluracord-matrix
 
 # Access
-$ cd dtmoney
+$ cd aluracord-matrix
 
 # Install dependencies
 $ yarn
