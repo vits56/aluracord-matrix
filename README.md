@@ -14,12 +14,12 @@
 ## Screenshots
 
 <div align="center" id="top"> 
-  <img src="./src/assets/screen2.png" alt="" />
+  <img src="./src/assets/screen1.png" alt="" />
 </div>
 <br/>
 <br/>
 <div align="center" id="top"> 
-  <img src="./src/assets/screen1.png" alt="" />
+  <img src="./src/assets/screen2.png" alt="" />
 </div>
 
 ## Features
