@@ -1,5 +1,4 @@
-# aluracord-matrix
-👨‍💻 Projeto criado na Imersão React com a @alura @omariosouto @peas
+
 <div align="center" id="top"> 
   <img src="./src/assets/logo.svg" alt="" />
 </div>
@@ -7,9 +6,10 @@
 <hr/>
 <br>
 
-## About
+## Sobre
+# aluracord-matrix
+👨‍💻 Projeto criado na Imersão React com a @alura @omariosouto @peas
 
-This applications is an personal finance manager.
 
 ## Screenshots
 
@@ -33,11 +33,9 @@ This applications is an personal finance manager.
 The following tools were used in this project:
 
 - [React](https://pt-br.reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [MirageJS](https://miragejs.com/)
-- [Polished](https://polished.js.org/)
-- [Axios](https://github.com/axios/axios)
-- [Styled Componensts](https://styled-components.com/)
+- [Next](https://nextjs.org/)
+- [Skynexui](https://skynexui.dev/)
+
 
 ## Requirements
 
