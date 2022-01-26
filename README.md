@@ -24,9 +24,9 @@
 
 ## Features
 
-- Table with personal finance data with name, amount, category and date.
-- Summary cards with incomes, outcomes and total.
-- Button that Create a new transaction using a beautiful modal.
+- 
+- 
+- 
 
 ## Technologies
 
