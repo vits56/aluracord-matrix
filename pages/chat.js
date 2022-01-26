@@ -6,6 +6,17 @@ export default function ChatPage() {
   const [mensagem, setMensagem] = React.useState('');
   const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
 
+  function handleChange(event) {
+    setMensagem(event.target.value)
+  }
+
+  function handleKeyPress(event, mensagem) {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      handleNovaMensagem(mensagem)
+    }
+  }
+
   /*
   // Usuário
   - Usuário digita no campo textarea
@@ -85,16 +96,8 @@ export default function ChatPage() {
           >
             <TextField
               value={mensagem}
-              onChange={(event) => {
-                const valor = event.target.value;
-                setMensagem(valor);
-              }}
-              onKeyPress={(event) => {
-                if (event.key === 'Enter') {
-                  event.preventDefault();
-                  handleNovaMensagem(mensagem);
-                }
-              }}
+              onChange={handleChange}
+              onKeyPress={event => handleKeyPress(event, mensagem)}
               placeholder="Insira sua mensagem aqui..."
               type="textarea"
               styleSheet={{
@@ -108,6 +111,21 @@ export default function ChatPage() {
                 color: appConfig.theme.colors.neutrals[200],
               }}
             />
+
+            <Button
+              type='button'
+              label='Enviar'
+              styleSheet={{
+                height: '100%',
+                borderRadius: '5px',
+
+                padding: '6px 8px',
+                backgroundColor: appConfig.theme.colors.primary[900],
+                Color: appConfig.theme.colors.neutrals[100],
+              }}
+              onClick={() => handleNovaMensagem(mensagem)}
+            />
+
           </Box>
         </Box>
       </Box>
