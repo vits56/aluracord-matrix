@@ -1,10 +1,31 @@
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import React from 'react';
 import appConfig from '../config.json';
+import { createClient } from '@supabase/supabase-js'
+
+
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzM2ODc4OSwiZXhwIjoxOTU4OTQ0Nzg5fQ.DJJgHgtZ4neKPaJ5njJeKy8xhwiNHXQwdtSLqB07tYk'
+const SUPABASE_URL = 'https://qzhztqwlhdayfkqdfarp.supabase.co'
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+
+
 
 export default function ChatPage() {
   const [mensagem, setMensagem] = React.useState('');
   const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
+
+  React.useEffect(() => {
+    supabaseClient
+      .from('mensagens')
+      .select('*')
+      .order('id', { ascending: false })
+      .then(({ data }) => {
+        console.log('dados da consulta', data)
+        setListaDeMensagens(data)
+      })
+  }, [])
+
 
   function handleChange(event) {
     setMensagem(event.target.value)
@@ -30,15 +51,24 @@ export default function ChatPage() {
   */
   function handleNovaMensagem(novaMensagem) {
     const mensagem = {
-      id: listaDeMensagens.length + 1,
-      de: 'Bruno Bastos',
+      //id: listaDeMensagens.length + 1,
+      de: 'vits56',
       texto: novaMensagem,
     };
 
-    setListaDeMensagens([
-      mensagem,
-      ...listaDeMensagens,
-    ]);
+    supabaseClient
+        .from('mensagens')
+        .insert([
+          mensagem
+        ])
+        .then(({ data }) => {
+            setListaDeMensagens([
+              data[0],
+              ...listaDeMensagens,
+            ]);
+        })
+
+    
     setMensagem('');
   }
 
@@ -192,7 +222,7 @@ function MessageList(props) {
                   display: 'inline-block',
                   marginRight: '8px',
                 }}
-                src={`https://github.com/vits56.png`}
+                src={`https://github.com/${mensagem.de}.png`}
               />
               <Text tag="strong">
                 {mensagem.de}
