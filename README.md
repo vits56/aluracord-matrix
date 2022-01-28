@@ -35,6 +35,7 @@ The following tools were used in this project:
 - [React](https://pt-br.reactjs.org/)
 - [Next](https://nextjs.org/)
 - [Skynexui](https://skynexui.dev/)
+- [Supabase](https://supabase.com/)
 
 
 ## Requirements
