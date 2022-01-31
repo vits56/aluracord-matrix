@@ -8,7 +8,7 @@
 
 ## Sobre
 # aluracord-matrix
-👨‍💻 Projeto criado na Imersão React com a @alura @omariosouto @peas
+👨‍💻 Project created in React Immersion with @alura @omariosouto @peas
 
 
 ## Screenshots
@@ -24,9 +24,9 @@
 
 ## Features
 
-- 
-- 
-- 
+- Exchanging messages between github users
+- Added stickers for messaging
+- Integration with Supabase
 
 ## Technologies
 
