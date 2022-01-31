@@ -25,7 +25,6 @@ function escutaMensagensEmTempoReal(adicionaMensagem) {
 export default function ChatPage() {
   const roteamento = useRouter();
   const usuarioLogado = roteamento.query.username;
-
   const [mensagem, setMensagem] = React.useState('');
   const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
 
@@ -42,13 +41,7 @@ export default function ChatPage() {
       const subscription = escutaMensagensEmTempoReal((novaMensagem) => {
         console.log('Nova mensagem:', novaMensagem);
         console.log('listaDeMensagens:', listaDeMensagens);
-        // Quero reusar um valor de referencia (objeto/array) 
-        // Passar uma função pro setState
-  
-        // setListaDeMensagens([
-        //     novaMensagem,
-        //     ...listaDeMensagens
-        // ])
+      
         setListaDeMensagens((valorAtualDaLista) => {
           console.log('valorAtualDaLista:', valorAtualDaLista);
           return [
@@ -75,17 +68,6 @@ export default function ChatPage() {
     }
   }
 
-  /*
-  // Usuário
-  - Usuário digita no campo textarea
-  - Aperta enter para enviar
-  - Tem que adicionar o texto na listagem
-  
-  // Dev
-  - [X] Campo criado
-  - [X] Vamos usar o onChange usa o useState (ter if pra caso seja enter pra limpar a variavel)
-  - [X] Lista de mensagens 
-  */
   function handleNovaMensagem(novaMensagem) {
     const mensagem = {
       //id: listaDeMensagens.length + 1,
